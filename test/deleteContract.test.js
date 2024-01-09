@@ -12,7 +12,7 @@ describe("delete a Contract", () => {
     it("should not show error", (done) => {
       chai
         .request(app)
-        .delete("/api/v1/contracts/5")
+        .delete("/api/v1/contracts/18")
         .end((err, res) => {
           res.should.have.status(200);
           done();
