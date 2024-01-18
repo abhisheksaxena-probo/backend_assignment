@@ -10,7 +10,7 @@ RUN apt-get update -y \
 && rm -rf /var/lib/apt/lists/*
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json .
+COPY package*.json ./
 
 # Install app dependencies
 RUN npm install mysqlclient
@@ -18,7 +18,7 @@ RUN npm install
 
 
 # Bundle app source
-COPY . .
+COPY . ./
 
 # Expose the port on which the Node.js app will run
 EXPOSE 3000
